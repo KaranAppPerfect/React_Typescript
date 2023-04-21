@@ -1,0 +1,80 @@
+.main{
+    display: grid;
+    grid-template-areas: 'header header  header header header header header '
+                            'navbar navbar navbar navbar navbar navbar navbar'
+                            'left left center center center right right'
+                            'footer footer footer footer footer footer footer';
+}
+
+.header{
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: start;
+    grid-area: navbar;
+    padding: 10px;
+    background-color: black;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.navbar > span{
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    margin-right: 10px;
+}
+
+.left-sidebar, .main-section, .right-sidebar{
+    padding: 10px;
+    height: 300px;
+}
+
+.left-sidebar{
+    background-color: aqua;
+    grid-area: left;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.main-section{
+    background-color: aquamarine;
+    grid-area: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.right-sidebar{
+    background-color: aqua;
+    grid-area: right;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media  screen and (max-width: 600px) {
+    .main{
+        grid-template-areas: 'header header'
+                                'navbar navbar'
+                                'left left'
+                                'center center'
+                                'right right'
+                                'footer footer';
+    }
+
+}
